@@ -1,0 +1,460 @@
+/* estilos genreales */
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+header{
+    margin-top: 2.5rem;
+    transition: 0.7s;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0A192F, #A5B8CC);
+    font-family: 'Segoe UI', sans-serif;
+    color: #1E1E1E; 
+    transition: all 0.3s ease;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.central-text{
+    text-align: center;
+}
+
+.scroll {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(10, 20, 40, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 0.5rem 2rem;
+    border-radius: 2rem; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    gap: 4rem;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+/* paguina princial */
+
+.principal_text{
+    color: #0A192F;
+}
+
+.link_text{
+    color: #0A192F;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0;
+    list-style: none;
+}
+
+nav a{
+    position: relative;
+    font-size: 1.2rem; 
+    color: white;
+    transition: 0.7s;
+}
+
+nav a:hover{
+    color: #A8DADC;
+}
+
+main{
+    margin-top: 3rem;
+}
+
+.presentacion{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+}
+
+.presentacion p{
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.description, footer{
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+
+.description h2{
+    font-size: 2.3rem;
+}
+
+.description img{
+    max-width: 40rem;
+    margin-right: 2rem;
+}
+
+footer{
+    margin-left: 5rem;
+}
+
+.redes{
+    display: flex;
+}
+
+.logo_redes{
+    padding: 1rem;
+}
+
+.logo_redes img{
+    max-width: 2.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo_redes img:hover{
+    transform: scale(1.5);
+}
+
+/* sobre mi */
+.img-aboutMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-aboutMe img{
+    max-width: 17rem;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+}
+
+.contnedor-princpial{
+    max-width: 100rem;
+    margin: 0 5rem;
+}
+
+/* seccion de competencias */
+.contenedor-competencia, .contenedor-estudio,.contenedor-proyectos{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.resumen-final{
+    margin: 5rem auto;
+    max-width: 50rem;
+}
+
+/* paguina estudios */
+
+.contenedor-estudio{
+    display: flex;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 55rem;
+    margin-bottom: 4rem;
+}
+
+.contenedor-estudio a, .contenedor-proyectos a{
+    color: white;
+}
+
+.contenedor-estudio:hover, .contenedor-proyectos:hover{
+    transform: scale(1.1);
+}
+
+.logo-estudio{
+    max-width: 15rem;
+    min-width: 14rem;
+    margin: 0 auto;
+}
+
+.completado{
+    font-weight: 700;
+    color: green;
+}
+
+.enproceso{
+    font-weight: 700;
+    color: orange;
+}
+
+/* paguina proyectos */
+
+.contenedor-proyectos{
+    max-width: 40rem;
+    margin: 0 2rem;
+}
+
+/* modo oscuro */
+.switch {
+  font-size: 17px;
+  position: absolute;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+/* ========== MODO OSCURO COMPLETO ========== */
+
+/* Fondo principal */
+.body-dark {
+  background: #0D1117;
+  color: #8B949E;
+}
+
+/* Títulos principales */
+.body-dark h1,
+.body-dark h2 {
+  color: #F0F6FC;
+}
+
+/* Títulos destacados */
+.body-dark h3 {
+  color: #58A6FF;
+}
+
+/* Texto principal y párrafos */
+.body-dark p,
+.body-dark span {
+  color: #8B949E;
+}
+
+/* Texto de presentación */
+.body-dark .principal_text {
+  color: #F0F6FC;
+}
+
+/* Links de texto */
+.body-dark .link_text {
+  color: #58A6FF;
+}
+
+.body-dark .link_text:hover {
+  color: #3FB950;
+}
+
+/* Navegación sticky */
+.body-dark .scroll {
+  background-color: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(5px);
+  border: 1px solid #30363D;
+}
+
+/* Links de navegación */
+.body-dark nav a {
+  color: #8B949E;
+}
+
+.body-dark nav a:hover {
+  color: #58A6FF;
+}
+
+/* Contenedores de secciones */
+.body-dark .contenedor-competencia,
+.body-dark .contenedor-estudio,
+.body-dark .contenedor-proyectos {
+  background-color: #161B22;
+  border: 1px solid #30363D;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover en contenedores */
+.body-dark .contenedor-estudio:hover,
+.body-dark .contenedor-proyectos:hover {
+  border-color: #58A6FF;
+  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.1);
+}
+
+/* Links en contenedores */
+.body-dark .contenedor-estudio a,
+.body-dark .contenedor-proyectos a {
+  color: #8B949E;
+}
+
+.body-dark .contenedor-estudio a:hover,
+.body-dark .contenedor-proyectos a:hover {
+  color: #58A6FF;
+}
+
+/* Estados de estudio */
+.body-dark .completado {
+  color: #3FB950;
+}
+
+.body-dark .enproceso {
+  color: #F85149;
+}
+
+/* Resumen final */
+.body-dark .resumen-final {
+  background-color: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.body-dark footer {
+  color: #8B949E;
+}
+
+/* Redes sociales */
+.body-dark .logo_redes img {
+  filter: brightness(0.8);
+}
+
+.body-dark .logo_redes img:hover {
+  filter: brightness(1.2);
+  filter: invert(1);
+}
+
+/* Imágenes */
+.body-dark .img-aboutMe img {
+  border: 2px solid #30363D;
+}
+
+.body-dark .description img,
+.body-dark .logo-estudio {
+  opacity: 0.9;
+  border-radius: 0.5rem;
+}
+
+/* Efectos adicionales para mejor apariencia */
+.body-dark .grid {
+  gap: 3rem;
+}
+
+/* Transiciones suaves */
+.body-dark * {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
